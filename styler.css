@@ -1,0 +1,56 @@
+body {
+    color: aliceblue;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(34, 34, 34);
+
+}
+
+label {
+    margin-left: 25px;
+}
+
+label span {
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    background-color: #f7f7f7;
+    border: 1px solid #8e8f92a1;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+label input:checked + span {
+    background-color: #00ff2a;
+    transition: all .6s;
+    box-shadow: 2px 2px 50px #00ff2a ;
+}
+
+label span::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: block;
+    background-color: #f7f7f7;
+    transition: all .6s;
+    box-shadow: 1px 1px 5px black;
+}
+
+label input:checked + span::before{
+    transform: translateX(30px);
+    background-color: #f7f7f7;
+    transition: all .6s;
+}
+
+input {
+    visibility: inherit;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+label{
+    position: relative;
+    top: 350px;
+}
